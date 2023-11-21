@@ -51,19 +51,19 @@ class _ReadState extends State<Read> {
                       },
                       leading: Icon(Icons.person),
                       title: Text(myAll[index]['holder']),
-                      // trailing: PopupMenuButton(
-                      //   itemBuilder: (context) => [
-                      //     PopupMenuItem(child: Text('Edit'),onTap: (){
-                      //       Toast.show("Edit Clicked");
-                      //       Navigator.push(context, MaterialPageRoute(builder: (context)=>Updation(myAll[index].accNumber)));
-                      //     },),
-                      //     PopupMenuItem(child: Text('Delete'),onTap: (){
-                      //       Toast.show("Delete Clicked");
-                      //       API.deleteOne(myAll[index].accNumber);
-                      //       //Navigator.pop(context,true);
-                      //     },),
-                      //   ],
-                      // ),
+                      trailing: PopupMenuButton(
+                        itemBuilder: (context) => [
+                          PopupMenuItem(child: Text('Edit'),onTap: (){
+                            Toast.show("Edit Clicked");
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Updation(myAll[index].id)));
+                          },),
+                          PopupMenuItem(child: Text('Delete'),onTap: (){
+                            Toast.show("Delete Clicked");
+                            //API.deleteOne(myAll[index].accNumber);
+                            //Navigator.pop(context,true);
+                          },),
+                        ],
+                      ),
                     ),
                   );
                 },
