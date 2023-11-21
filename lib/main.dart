@@ -10,7 +10,7 @@ void main()async{
       options:DefaultFirebaseOptions.currentPlatform,
   );
   runApp(MaterialApp(
-    // home:Read()
-    home:Creation()
+    home:Read()
+    // home:Creation()
   ));
 }

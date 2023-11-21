@@ -58,6 +58,8 @@ class _CreationState extends State<Creation> {
                       };
                       await _firestore.collection("kyc").add(data);
                       Toast.show("KYC added",duration: Toast.lengthLong);
+                      accNumberController.text="";accHolderController.text="";
+                      accBalanceController.text="";
                     },
                     icon: Icon(Icons.add),
                     label: Text("Create new Account"),
