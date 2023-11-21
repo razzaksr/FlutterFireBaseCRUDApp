@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1067616234939",
+    "project_id": "my-base-one-b8089",
+    "storage_bucket": "my-base-one-b8089.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067616234939:android:bab4a625e29099005b689e",
+        "android_client_info": {
+          "package_name": "com.example.my_base_one"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDprAVNg57jQNWvv-FV6G7bshkgfJ90JQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
