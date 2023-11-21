@@ -57,10 +57,10 @@ class _ReadState extends State<Read> {
                             Toast.show("Edit Clicked");
                             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Updation(myAll[index].id)));
                           },),
-                          PopupMenuItem(child: Text('Delete'),onTap: (){
+                          PopupMenuItem(child: Text('Delete'),onTap: ()async{
                             Toast.show("Delete Clicked");
-                            //API.deleteOne(myAll[index].accNumber);
-                            //Navigator.pop(context,true);
+                            await _firestore.collection("kyc").doc(myAll[index].id).delete();
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Read(),));
                           },),
                         ],
                       ),
