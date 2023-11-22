@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:my_base_one/Create.dart';
 import 'package:my_base_one/Read.dart';
+import 'package:my_base_one/Signin.dart';
 class AppDrawer extends StatefulWidget {
   const AppDrawer({super.key});
 
@@ -32,6 +34,10 @@ class _AppDrawerState extends State<AppDrawer> {
           ListTile(
             leading: Icon(Icons.logout_outlined),
             title: Text('Logout'),
+            onTap: ()async{
+              await FirebaseAuth.instance.signOut();
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignIn(),));
+            },
           ),
           AboutListTile(
             icon: Icon(Icons.info_outline),
