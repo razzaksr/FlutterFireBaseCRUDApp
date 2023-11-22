@@ -44,7 +44,7 @@ class _SignInState extends State<SignIn> {
                       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Read(),));
                     },
                     icon: Icon(Icons.login_outlined),
-                    label: Text('SignIn')
+                    label: Text('Signin')
                 )
               ],
             ),
