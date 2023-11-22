@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:my_base_one/AppDrawer.dart';
 import 'package:my_base_one/Read.dart';
 import 'package:toast/toast.dart';
 
@@ -30,6 +31,7 @@ class _UpdationState extends State<Updation> {
         title: Text('Updating records of ${widget.docId}'),
         centerTitle: true,
       ),
+      drawer: AppDrawer(),
       body:StreamBuilder(
           stream: _firestore.collection("kyc").doc(widget.docId).get().asStream(), //readOneFromFirebase() as Stream<dynamic>,
           builder: (BuildContext context,AsyncSnapshot snapshot){

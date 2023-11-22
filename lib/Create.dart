@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:my_base_one/AppDrawer.dart';
 import 'package:toast/toast.dart';
 
 class Creation extends StatefulWidget {
@@ -22,6 +23,7 @@ class _CreationState extends State<Creation> {
         title: Text('Create an account'),
         centerTitle: true,
       ),
+      drawer: AppDrawer(),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(15.0),

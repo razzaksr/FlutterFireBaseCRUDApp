@@ -1,6 +1,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:my_base_one/AppDrawer.dart';
 import 'package:my_base_one/Create.dart';
 import 'package:toast/toast.dart';
 import 'Update.dart';
@@ -24,6 +25,7 @@ class _ReadState extends State<Read> {
           centerTitle: true,
           backgroundColor: Colors.lightBlue,
         ),
+        drawer: AppDrawer(),
         body:StreamBuilder(
           stream: _firestore.collection("kyc").snapshots(),
           builder: (BuildContext context,AsyncSnapshot snapshot){
